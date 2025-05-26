@@ -46,14 +46,20 @@ const CourseRow: React.FC<CourseRowProps> = ({ course, semesterId, courseIndex, 
         aria-label={`Credits for course ${courseIndex + 1}`}
         error={error?.credits}
       />
-      <Select
-        label="Grade"
-        id={`grade-${course.id}`}
-        options={gradeOptions.map(g => ({ value: g.value, label: g.label }))}
-        value={course.grade}
-        onChange={(e) => onCourseChange(semesterId, course.id, 'grade', e.target.value)}
-        aria-label={`Grade for course ${courseIndex + 1}`}
-      />
+  <Select
+  label="Grade"
+  id={`grade-${course.id}`}
+  options={gradeOptions.map(g => ({
+    value: g.value,
+    label: `${g.value} (${g.points.toFixed(1)})` // Clearer label with fixed decimal precision
+  }))}
+  value={course.value}
+  onChange={(e) =>
+    onCourseChange(semesterId, course.id, 'grade', e.target.value)
+  }
+  aria-label={`Grade for course ${courseIndex + 1}`}
+/>
+
       <Button 
         onClick={() => onRemoveCourse(semesterId, course.id)} 
         variant="danger" 
