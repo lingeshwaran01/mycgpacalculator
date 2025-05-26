@@ -32,18 +32,30 @@ const EditGradeMappingModal: React.FC<EditGradeMappingModalProps> = ({
   if (!isOpen) return null;
 
   const handlePointChange = (gradeValue: string, newPoints: string) => {
-    const point = parseFloat(newPoints);
+    const point = newPoints.length === 0 ? 0 : parseFloat(newPoints);
+  
     setEditableOptions(prevOptions =>
       prevOptions.map(opt =>
-        opt.value === gradeValue ? { ...opt, points: isNaN(point) ? opt.points : point } : opt
+        opt.value === gradeValue
+          ? { ...opt, points: isNaN(point) ? opt.points : point }
+          : opt
       )
     );
+  
     if (isNaN(point) || point < 0) {
-        setErrors(prev => ({...prev, [gradeValue]: "Must be a non-negative number."}));
+      setErrors(prev => ({
+        ...prev,
+        [gradeValue]: "Must be a non-negative number."
+      }));
     } else {
-        setErrors(prev => { const newErr = {...prev}; delete newErr[gradeValue]; return newErr;});
+      setErrors(prev => {
+        const newErr = { ...prev };
+        delete newErr[gradeValue];
+        return newErr;
+      });
     }
   };
+  
 
   const handleSave = () => {
     if (Object.keys(errors).length > 0) {
