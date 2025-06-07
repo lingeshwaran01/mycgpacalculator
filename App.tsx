@@ -4,6 +4,7 @@ import CgpaToPercentageConverter from './components/CgpaToPercentageConverter';
 import PercentageToCgpaConverter from './components/PercentageToCgpaConverter';
 import GradePointCalculator from './components/GradePointCalculator';
 import AdPlaceholder from './components/shared/AdPlaceholder';
+import NotFound from './components/NotFound';
 
 const tabClass =
   'px-3 py-2 sm:px-4 sm:py-2.5 text-sm sm:text-base font-medium rounded-lg transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-academic-blue';
@@ -61,6 +62,7 @@ const App: React.FC = () => {
             <Route path="/" element={<GradePointCalculator />} />
             <Route path="/cgpa-to-percentage" element={<CgpaToPercentageConverter />} />
             <Route path="/percentage-to-cgpa" element={<PercentageToCgpaConverter />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </section>
     
