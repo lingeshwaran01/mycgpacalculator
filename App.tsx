@@ -11,8 +11,8 @@ const tabClass =
 const App: React.FC = () => {
   return (
 
-   <div className="min-h-screen flex flex-col ">
-    <div className="max-w-3xl mx-auto"> 
+<div className="flex flex-col">
+<div className="max-w-3xl mx-auto px-4 py-6">
 
       
    
