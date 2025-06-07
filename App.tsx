@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
       
    
-        <AdPlaceholder type="Top Banner" className="mb-6" />
+        {/* <AdPlaceholder type="Top Banner" className="mb-6" /> */}
 
         {/* ✅ Nav with NavLink */}
         <nav className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-3 p-2 bg-white/70 backdrop-blur-sm rounded-xl shadow-md">
