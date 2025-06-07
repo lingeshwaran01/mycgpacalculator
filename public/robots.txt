@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /
-Sitemap: https://www.mycgpacalculator.xyz/sitemap.xml
+Disallow:
+
+Sitemap: https://mycgpacalculator.xyz/sitemap.xml
