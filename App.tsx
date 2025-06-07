@@ -62,7 +62,7 @@ const App: React.FC = () => {
             <Route path="/" element={<GradePointCalculator />} />
             <Route path="/cgpa-to-percentage" element={<CgpaToPercentageConverter />} />
             <Route path="/percentage-to-cgpa" element={<PercentageToCgpaConverter />} />
-            {/* <Route path='*' element={<NotFound />} /> */}
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </section>
     
