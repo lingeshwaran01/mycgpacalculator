@@ -85,6 +85,7 @@ const CgpaToPercentageConverter: React.FC = () => {
   const tooltipText = `The conversion multiplier. Default for ${scale} scale is ${scale === GradingScale.SCALE_4 ? DEFAULT_CONVERSION_FACTORS.CGPA_TO_PERCENTAGE_4_0 : DEFAULT_CONVERSION_FACTORS.CGPA_TO_PERCENTAGE_10_0}. You can customize this based on your university's formula. Percentage = CGPA * Multiplier.`;
 
   return (
+
     <div>
       <h2 className="text-2xl font-semibold text-mercury-black mb-1 font-serif">CGPA to Percentage</h2>
       <p className="text-sm text-slate-600 mb-6">Convert your CGPA into an equivalent percentage. You can customize the conversion multiplier.</p>
@@ -134,6 +135,7 @@ const CgpaToPercentageConverter: React.FC = () => {
         <p className="mt-4 text-sm text-red-600 bg-red-100 p-3 rounded-md">{error}</p>
       )}
     </div>
+
   );
 };
 

@@ -417,6 +417,7 @@ const GradePointCalculator: React.FC = () => {
 
 
   return (
+
     <div>
       <h2 className="text-2xl font-semibold text-mercury-black mb-1 font-serif">CGPA & SGPA  Calculator</h2>
       <p className="text-sm text-slate-600 mb-6">Calculate your SGPA per semester and overall CGPA. Customize grade points as per your university.</p>
@@ -576,6 +577,7 @@ const GradePointCalculator: React.FC = () => {
         />
       )}
     </div>
+
   );
 };
 

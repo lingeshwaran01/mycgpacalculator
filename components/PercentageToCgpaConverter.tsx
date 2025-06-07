@@ -77,6 +77,7 @@ const PercentageToCgpaConverter: React.FC = () => {
   const tooltipText = `The conversion divisor. Default for ${scale} scale is ${scale === GradingScale.SCALE_4 ? DEFAULT_CONVERSION_FACTORS.PERCENTAGE_TO_CGPA_4_0 : DEFAULT_CONVERSION_FACTORS.PERCENTAGE_TO_CGPA_10_0}. You can customize this. CGPA = Percentage / Divisor (capped at scale max).`;
 
   return (
+
     <div>
       <h2 className="text-2xl font-semibold text-mercury-black mb-1 font-serif">Percentage to CGPA</h2>
       <p className="text-sm text-slate-600 mb-6">Convert your percentage into an equivalent CGPA. You can customize the conversion divisor.</p>
@@ -126,6 +127,7 @@ const PercentageToCgpaConverter: React.FC = () => {
          <p className="mt-4 text-sm text-red-600 bg-red-100 p-3 rounded-md">{error}</p>
       )}
     </div>
+
   );
 };
 
